@@ -1,1 +1,1 @@
-# PONG-atari-without-using-convolutional-networks-CNN-
+# PONG-atari-without-using-convolutional-networks-CNN
