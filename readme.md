@@ -11,19 +11,19 @@ python3 -m venv pong
 source pong/bin/activate
 ```
 
-`Update the package index`
+Update the package index
 
 ```
 sudo apt update
 ```
 
-`Install pip and Python headers`
+Install pip and Python headers
 
 ```
 sudo apt install python3-pip python3-dev
 ```
 
-`Finally install Jupyter`
+Finally install Jupyter
 
 ```
 pip install jupyter
@@ -37,20 +37,20 @@ pip install ipykernel
 python -m ipykernel install --user --name=pong
 ```
 
-`Now you can run Jupiter with the command`
+Now you can run Jupiter with the command
 
 ```
 jupyter notebook
 ```
 
-`After that, go to the menu and select: Kernel > Change kernel > pong`
+After that, go to the menu and select: Kernel > Change kernel > pong
 
-`This is important - our notebook must work in a virtual environment created by us.`
+This is important - our notebook must work in a virtual environment created by us.
 
-`Now let's load all the dependencies from the file "requirements.txt ".`
+Now let's load all the dependencies from the file "requirements.txt ".
 
 ```
 pip install -r requirements.txt
 ```
 
-`Okay, now we're ready to start. Open the file "PONG_hw.ipynb" in jupiter. We will skip the first point, since we have already installed all the dependencies.`
+Okay, now we're ready to start. Open the file "PONG_hw.ipynb" in jupiter. We will skip the first point, since we have already installed all the dependencies.
