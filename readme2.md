@@ -65,7 +65,7 @@ By **the third and fourth point**, we simply import all the necessary libraries 
 
 Usually, convolutional neural networks are used for such training, that is, they process the entire picture corresponding to each frame of the game as a whole. This leads to a huge number of trainable parameters - about 3.5 million. Here is an example of such an architecture.
 
-![](media/0dfdf824fe7d0ec64cddb9aad593b7ce.png)
+![CNN architecture](https://github.com/mic21053/PONG-atari-without-using-convolutional-networks-CNN-/blob/main/Образец%20архитектуры.png)
 
 My idea is to translate each state of the game (that is, each frame) into an embedding vector, in which we encrypt only the data that matters for winning. So, we begin to get rid of excess. Here is our frame in its original form.
 
