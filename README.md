@@ -90,3 +90,5 @@ And in fact, in this frame, we only care about the position of our racket and th
 At the output, we also glue the batch dimension to the resulting vector.
 
 Thus, we encrypted the state of the game through 8 digits.
+
+In **the sixth point**, we set all the hyperparameters of the model.
