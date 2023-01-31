@@ -69,23 +69,23 @@ Usually, convolutional neural networks are used for such training, that is, they
 
 My idea is to translate each state of the game (that is, each frame) into an embedding vector, in which we encrypt only the data that matters for winning. So, we begin to get rid of excess. Here is our frame in its original form.
 
-![](media/38780debb562ddbb7e49e9fba5417e88.png)
+![](https://github.com/mic21053/PONG-atari-without-using-convolutional-networks-CNN-/blob/main/illustrations/1.png)
 
 First, we will convert the color image to shades of gray - so we will get rid of the two dimensions of the channels. From the picture 210x160x3 we get a picture 210x160.
 
-![](media/156083e5b7533b5a5e97d2842145df97.png)
+![](https://github.com/mic21053/PONG-atari-without-using-convolutional-networks-CNN-/blob/main/illustrations/2.png)
 
 The field in which the rackets and the ball can move is not the whole picture. The strip on top with the score and the strip on the bottom do not affect the game in any way. Therefore, we will cut the picture from the top and bottom. We will get a 160x160 picture.
 
-![](media/434d3ec74e566da76d612d849ebb2caa.png)
+![](https://github.com/mic21053/PONG-atari-without-using-convolutional-networks-CNN-/blob/main/illustrations/3.png)
 
 And in fact, in this frame, we only care about the position of our racket and the position of the ball. The position of the opponent's racket is not important to us - our task is to trace the trajectory of the ball flying in our direction and put our racket under it in time. And where this ball will fly from is not important to us. Looking at the brightness values of the current state, we will see that the brightness value of our racket is 0.57713255, and the brightness value of the ball is 0.92539765. Using "np.where" we will find the coordinates of our racket and ball (namely, the upper left corner and the lower right corner) and write them as the embedding vector. If there is no racket or ball on the screen at the moment, we will write (-1, -1, -1, -1). "gray_small" in the figure corresponds to "gray" in the code.
 
-![](media/87f1b9db311f28563333dea16f9abdc5.png)
+![](https://github.com/mic21053/PONG-atari-without-using-convolutional-networks-CNN-/blob/main/illustrations/4.png)
 
-![](media/bdf45b664296789d9fb70c34b208690c.png)
+![](https://github.com/mic21053/PONG-atari-without-using-convolutional-networks-CNN-/blob/main/illustrations/5.png)
 
-![](media/51570c1b6de59ed1f288924c0480b98d.png)
+![](https://github.com/mic21053/PONG-atari-without-using-convolutional-networks-CNN-/blob/main/illustrations/6.png)
 
 At the output, we also glue the batch dimension to the resulting vector.
 
