@@ -97,3 +97,4 @@ In **the seventh point**, we will create a function that builds the architecture
 Next, we will create two models with this architecture. They will be absolutely identical, except for the weights, which will be initialized randomly.
 Let's take a look at the "summary" of this model.
 
+![](https://github.com/mic21053/PONG-atari-without-using-convolutional-networks-CNN-/blob/main/illustrations/7.png)
