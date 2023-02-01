@@ -92,3 +92,8 @@ At the output, we also glue the batch dimension to the resulting vector.
 Thus, we encrypted the state of the game through 8 digits.
 
 In **the sixth point**, we set all the hyperparameters of the model.
+
+In **the seventh point**, we will create a function that builds the architecture of our model. The most interesting layer is the first one. This is a recurrent layer. It accepts as input, in addition to the current one, several other previous states of the environment in the amount specified in the "RNN_LENGTH" hyperparameter. This allows us to take into account the dynamics of the ball's movement, that is, its trajectory.
+Next, we will create two models with this architecture. They will be absolutely identical, except for the weights, which will be initialized randomly.
+Let's take a look at the "summary" of this model.
+
