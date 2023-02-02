@@ -98,3 +98,17 @@ Next, we will create two models with this architecture. They will be absolutely 
 Let's take a look at the "summary" of this model.
 
 ![](https://github.com/mic21053/PONG-atari-without-using-convolutional-networks-CNN-/blob/main/illustrations/7.png)
+
+As we can see, the number of parameters differs 455 times - 3358374 parameters for a model built on a convolutional network, against 7382 parameters for my model. Moreover, the efficiency can be adjusted very well by playing with hyperparameters. At the same time, the network is trained for quite a long time anyway - therefore, due to lack of time, I did not select ideal hyperparameters. If you want, do it. In this work, the main thing for me is to show the very principle of how my network works.
+
+In **the eighth point**, we will make the weights of our two created networks the same. To do this, we will write a small function, since we will have to do this copying more than once.
+
+**The ninth point** is divided into two sub-points - 9.1 and 9.2. Now the code in paragraph 9.1 is commented out. But when you start training for the first time, you need to uncomment and execute it. Since the training goes on for a very long time, and the computer can suddenly stop working for various reasons (for example, the lights are turned off), in order not to lose progress, our training saves these five parameters, as well as the model and its weights, every 100 iterations of our training. So if the work was interrupted, then in order to restore the training from the last checkpoint, we will have to comment out paragraph 9.2, and on the contrary, comment out paragraph 9.1 and we will not refer to it again in the future.
+
+In **the tenth point**, we finally start learning. Moreover, let's pay attention to the "range" function in the cycle of iterations by episodes. During the initial training, it will look like "range(NUM_EPISODES)". If we resume work from a checkpoint, then we need to add an initial value equal to the checkpoint number + 1. That is, "range(<checkpoint + 1>, NUM_EPISODES)".
+
+In **the eleventh point**, we save the model and weights in different formats to the "Finish_model" folder. Next, to load the finished model, you just need to run the command "model = load_model('Finish_Model/MODEL')".
+
+Finally, in **the twelfth point**, we visualize the statistical data collected during the training and look at the independent game of the finished model.
+
+![](https://github.com/mic21053/PONG-atari-without-using-convolutional-networks-CNN-/blob/main/illustrations/8.png)
