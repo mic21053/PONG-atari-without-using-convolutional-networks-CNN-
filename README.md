@@ -112,3 +112,17 @@ In **the eleventh point**, we save the model and weights in different formats to
 Finally, in **the twelfth point**, we visualize the statistical data collected during the training and look at the independent game of the finished model.
 
 ![](https://github.com/mic21053/PONG-atari-without-using-convolutional-networks-CNN-/blob/main/illustrations/8.png)
+
+As we can see, the duration of episodes increases. This suggests that the network is playing better and the game is no longer going "one-way".
+
+![](https://github.com/mic21053/PONG-atari-without-using-convolutional-networks-CNN-/blob/main/illustrations/9.png)
+
+As we can see, even 100,000 episodes for learning how to win all the games were not enough. Indeed, there are quite a lot of all possible trajectories. Again, it was still possible to experiment with hyperparameters, as I said above. But the dynamics are clearly visible.
+
+![](https://github.com/mic21053/PONG-atari-without-using-convolutional-networks-CNN-/blob/main/illustrations/10.png)
+
+Similar to the previous schedule. The dynamics are also clearly visible.
+
+An example of a game of a ready-made model.
+
+![demo.gif](https://github.com/mic21053/PONG-atari-without-using-convolutional-networks-CNN-/blob/main/illustrations/model_play.gif)
